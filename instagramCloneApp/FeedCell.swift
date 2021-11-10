@@ -31,7 +31,8 @@ class FeedCell: UITableViewCell  {
         if let likeCount = Int(likeCount.text!){
             let likeStore = ["likes" : likeCount + 1 ] as [String: Any]
             fireStoreDatabase.collection("Posts").document(documentIdLabel.text!).setData(likeStore, merge: true)
-        }
+        
         
     }
+}
 }
